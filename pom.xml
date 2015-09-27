@@ -26,6 +26,8 @@
     <plugin.version.maven-compiler-plugin>3.3</plugin.version.maven-compiler-plugin>
     <plugin.version.maven-surefire-plugin>2.18.1</plugin.version.maven-surefire-plugin>
     <plugin.version.maven-failsafe-plugin>2.18.1</plugin.version.maven-failsafe-plugin>
+    <!-- Version of the qualinsight-mojo-cobertura plugin to be tested -->
+    <plugin.version.qualinsight-mojo-cobertura-core>1.0.4</plugin.version.qualinsight-mojo-cobertura-core>
   </properties>
   <build>
     <plugins>
@@ -79,7 +81,7 @@
       <plugin>
         <groupId>com.qualinsight.mojo.cobertura</groupId>
         <artifactId>qualinsight-mojo-cobertura-core</artifactId>
-        <version>1.0.4</version>
+        <version>${plugin.version.qualinsight-mojo-cobertura-core}</version>
         <executions>
           <execution>
             <id>instrument-ut</id>
