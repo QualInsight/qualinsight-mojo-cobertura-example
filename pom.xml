@@ -23,6 +23,7 @@
     </dependency>
   </dependencies>
   <properties>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <!-- Libraries versions -->
     <lib.version.junitparams>1.0.4</lib.version.junitparams>
     <lib.version.assertj-core>2.1.0</lib.version.assertj-core>
@@ -35,7 +36,7 @@
     <plugin.version.maven-surefire-plugin>2.18.1</plugin.version.maven-surefire-plugin>
     <plugin.version.maven-failsafe-plugin>2.18.1</plugin.version.maven-failsafe-plugin>
     <!-- Version of the qualinsight-mojo-cobertura plugin to be tested -->
-    <plugin.version.qualinsight-mojo-cobertura-core>1.0.4</plugin.version.qualinsight-mojo-cobertura-core>
+    <plugin.version.qualinsight-mojo-cobertura-core>1.0.6</plugin.version.qualinsight-mojo-cobertura-core>
   </properties>
   <dependencyManagement>
     <dependencies>
