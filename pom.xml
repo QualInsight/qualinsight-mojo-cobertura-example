@@ -23,12 +23,66 @@
     </dependency>
   </dependencies>
   <properties>
+    <!-- Libraries versions -->
+    <lib.version.junitparams>1.0.4</lib.version.junitparams>
+    <lib.version.assertj-core>2.1.0</lib.version.assertj-core>
+    <lib.version.junit>4.11</lib.version.junit>
+    <lib.version.logback-classic>1.1.3</lib.version.logback-classic>
+    <lib.version.mockito>1.10.19</lib.version.mockito>
+    <lib.version.powermock>1.6.2</lib.version.powermock>
+    <!-- Plugins versions -->
     <plugin.version.maven-compiler-plugin>3.3</plugin.version.maven-compiler-plugin>
     <plugin.version.maven-surefire-plugin>2.18.1</plugin.version.maven-surefire-plugin>
     <plugin.version.maven-failsafe-plugin>2.18.1</plugin.version.maven-failsafe-plugin>
     <!-- Version of the qualinsight-mojo-cobertura plugin to be tested -->
     <plugin.version.qualinsight-mojo-cobertura-core>1.0.4</plugin.version.qualinsight-mojo-cobertura-core>
   </properties>
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.mockito</groupId>
+        <artifactId>mockito-all</artifactId>
+        <version>${lib.version.mockito}</version>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.assertj</groupId>
+        <artifactId>assertj-core</artifactId>
+        <version>${lib.version.assertj-core}</version>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.powermock</groupId>
+        <artifactId>powermock-module-junit4</artifactId>
+        <version>${lib.version.powermock}</version>
+        <scope>test</scope>
+        <exclusions>
+          <exclusion>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>org.powermock</groupId>
+        <artifactId>powermock-api-mockito</artifactId>
+        <version>${lib.version.powermock}</version>
+        <scope>test</scope>
+        <exclusions>
+          <exclusion>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-all</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>pl.pragmatists</groupId>
+        <artifactId>JUnitParams</artifactId>
+        <version>${lib.version.junitparams}</version>
+        <scope>test</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
   <build>
     <plugins>
       <plugin>
