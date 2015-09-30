@@ -22,3 +22,6 @@ target/
 # MacOS X files
 .DS_Store
 /bin/
+
+# Project specific files
+*.ser
