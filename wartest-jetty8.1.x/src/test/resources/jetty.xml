@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE Configure PUBLIC "-//Jetty//Configure//EN" "http://www.eclipse.org/jetty/configure.dtd">
+
+<Configure id="Server" class="org.eclipse.jetty.server.Server">
+  <New id="CoberturaCoverageService" class="com.qualinsight.plugins.jetty.CoberturaCoverageService" />
+  <Call name="addBean">
+    <Arg>
+      <Ref id="CoberturaCoverageService" />
+    </Arg>
+  </Call>
+  <Call name="manage">
+    <Arg>
+      <Ref id="CoberturaCoverageService" />
+    </Arg>
+  </Call>
+  <Call name="setStopAtShutdown">
+    <Arg type="boolean">True</Arg>
+  </Call>
+  <Call name="setGracefulShutdown">
+    <Arg type="int">10000</Arg>
+  </Call>
+</Configure>

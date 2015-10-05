@@ -8,7 +8,9 @@
     <module>alltests</module>
     <module>uttests</module>
     <module>ittests</module>
-    <module>wartest</module>
+    <module>wartest-jetty8.1.x</module>
+    <module>wartest-jetty9.2.x</module>
+    <module>wartest-jetty9.3.x</module>
   </modules>
   <properties>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>

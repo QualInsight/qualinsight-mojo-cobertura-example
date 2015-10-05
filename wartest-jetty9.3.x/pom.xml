@@ -5,18 +5,30 @@
     <artifactId>qualinsight-mojo-cobertura-example</artifactId>
     <version>1.0.0-SNAPSHOT</version>
   </parent>
-  <artifactId>qualinsight-mojo-cobertura-wartest</artifactId>
+  <artifactId>qualinsight-mojo-cobertura-example-wartest-jetty9.3.x</artifactId>
   <packaging>war</packaging>
   <properties>
-    <lib.version.jetty>9.2.13.v20150730</lib.version.jetty>
-    <lib.version.qualinsight-plugins-jetty>1.0.0</lib.version.qualinsight-plugins-jetty>
+    <lib.version.javax.servlet-api>3.1.0</lib.version.javax.servlet-api>
+    <lib.version.jetty-util>9.3.3.v20150827</lib.version.jetty-util>
+    <lib.version.qualinsight-plugins-jetty>1.0.1-SNAPSHOT</lib.version.qualinsight-plugins-jetty>
+    <plugin.version.jetty-maven-plugin>9.3.3.v20150827</plugin.version.jetty-maven-plugin>
   </properties>
   <build>
     <plugins>
       <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>${plugin.version.maven-compiler-plugin}</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+          <encoding>UTF-8</encoding>
+        </configuration>
+      </plugin>
+      <plugin>
         <groupId>org.eclipse.jetty</groupId>
         <artifactId>jetty-maven-plugin</artifactId>
-        <version>${lib.version.jetty}</version>
+        <version>${plugin.version.jetty-maven-plugin}</version>
         <configuration>
           <stopKey>secret</stopKey>
           <stopPort>9999</stopPort>
@@ -24,12 +36,13 @@
           <webAppConfig>
             <contextPath>/wartest</contextPath>
           </webAppConfig>
-          <jettyXml>wartest/src/test/resources/jetty.xml</jettyXml>
+          <jettyXml>${project.basedir}/src/test/resources/jetty.xml</jettyXml>
           <classesDirectory>${project.build.directory}/cobertura/it/instrumented-classes</classesDirectory>
           <systemProperties>
+            <force>true</force>
             <systemProperty>
               <name>net.sourceforge.cobertura.datafile</name>
-              <value>${basedir}/cobertura.ser</value>
+              <value>${project.basedir}/cobertura.ser</value>
             </systemProperty>
           </systemProperties>
         </configuration>
@@ -55,13 +68,13 @@
         <dependencies>
           <dependency>
             <groupId>com.qualinsight.plugins.jetty</groupId>
-            <artifactId>qualinsight-plugins-jetty</artifactId>
+            <artifactId>qualinsight-plugins-jetty-9.3.x</artifactId>
             <version>${lib.version.qualinsight-plugins-jetty}</version>
           </dependency>
           <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-util</artifactId>
-            <version>${lib.version.jetty}</version>
+            <version>${lib.version.jetty-util}</version>
           </dependency>
           <dependency>
             <groupId>net.sourceforge.cobertura</groupId>
@@ -133,7 +146,7 @@
     <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>javax.servlet-api</artifactId>
-      <version>3.1.0</version>
+      <version>${lib.version.javax.servlet-api}</version>
       <scope>provided</scope>
     </dependency>
   </dependencies>
