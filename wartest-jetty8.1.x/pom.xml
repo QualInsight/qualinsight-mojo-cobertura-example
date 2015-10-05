@@ -10,7 +10,6 @@
   <properties>
     <lib.version.javax.servlet-api>3.0.1</lib.version.javax.servlet-api>
     <lib.version.jetty>8.1.17.v20150415</lib.version.jetty>
-    <lib.version.qualinsight-plugins-jetty>1.0.1-SNAPSHOT</lib.version.qualinsight-plugins-jetty>
     <plugin.version.jetty-maven-plugin>8.1.16.v20140903</plugin.version.jetty-maven-plugin>
   </properties>
   <build>
