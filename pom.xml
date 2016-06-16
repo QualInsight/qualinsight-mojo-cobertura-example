@@ -8,13 +8,14 @@
     <module>alltests</module>
     <module>uttests</module>
     <module>ittests</module>
+    <module>nonstandard</module>
   </modules>
   <properties>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <!-- Version of the qualinsight-plugins-jetty lib to be used -->
     <lib.version.qualinsight-plugins-jetty>1.0.1</lib.version.qualinsight-plugins-jetty>
     <!-- Version of the qualinsight-mojo-cobertura plugin to be tested -->
-    <plugin.version.qualinsight-mojo-cobertura-core>1.0.8</plugin.version.qualinsight-mojo-cobertura-core>
+    <plugin.version.qualinsight-mojo-cobertura-core>1.1.0</plugin.version.qualinsight-mojo-cobertura-core>
     <!-- Libraries versions -->
     <lib.version.junitparams>1.0.4</lib.version.junitparams>
     <lib.version.assertj-core>2.1.0</lib.version.assertj-core>
