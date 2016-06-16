@@ -12,6 +12,7 @@ Here are corresponding constraints:
 | uttests            | 1.7         | 3.3.3         | none        | none             |
 | ittests            | 1.7         | 3.3.3         | none        | none             |
 | alltests           | 1.7         | 3.3.3         | none        | none             |
+| nonstandard        | 1.7         | 3.3.3         | none        | none             |
 | wartest-jetty7.6.x | 1.5         | 3.0.5         | 2.5         | 7.6.17.v20150415 |
 | wartest-jetty8.1.x | 1.6         | 3.3.3         | 3.0.1       | 8.1.17.v20150415 |
 | wartest-jetty9.2.x | 1.7         | 3.3.3         | 3.1.0       | 9.2.13.v20150730 |
@@ -19,5 +20,3 @@ Here are corresponding constraints:
 
 **Note**: Cobertura data file dump while running IT tests for servlets deployed on a Jetty server is done thanks to a shutdown hook provided by the [``qualinsight-plugins-jetty``](https://github.com/QualInsight/qualinsight-plugins-jetty) project.
 
-## Build status
-[![Build Status](https://travis-ci.org/pawlakm/qualinsight-mojo-cobertura-example.svg?branch=master)](https://travis-ci.org/pawlakm/qualinsight-mojo-cobertura-example)
