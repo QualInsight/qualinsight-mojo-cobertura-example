@@ -37,7 +37,7 @@
 				<groupId>com.qualinsight.mojo.cobertura</groupId>
 				<artifactId>qualinsight-mojo-cobertura-core</artifactId>
 				<configuration>
-					<baseDirectoryPath>${project.basedir}/src/java/</baseDirectoryPath>
+					<sourcesDirectoryPath>${project.basedir}/src/java/</sourcesDirectoryPath>
 				</configuration>
 			</plugin>
 		</plugins>

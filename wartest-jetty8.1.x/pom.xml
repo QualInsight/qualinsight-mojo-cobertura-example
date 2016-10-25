@@ -161,7 +161,7 @@
             </goals>
             <phase>package</phase>
             <configuration>
-              <destinationDirectoryPath>${project.build.directory}/cobertura/it/instrumented-classes</destinationDirectoryPath>
+              <destinationPath>${project.build.directory}/cobertura/it/instrumented-classes</destinationPath>
             </configuration>
           </execution>
           <execution>
