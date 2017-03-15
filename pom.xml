@@ -19,15 +19,15 @@
     <!-- Libraries versions -->
     <lib.version.junitparams>1.0.4</lib.version.junitparams>
     <lib.version.assertj-core>2.1.0</lib.version.assertj-core>
-    <lib.version.junit>4.11</lib.version.junit>
+    <lib.version.junit>4.12</lib.version.junit>
     <lib.version.logback-classic>1.1.3</lib.version.logback-classic>
     <lib.version.mockito>1.10.19</lib.version.mockito>
     <lib.version.powermock>1.6.2</lib.version.powermock>
     <lib.version.cobertura>2.1.1</lib.version.cobertura>
     <!-- Plugins versions -->
     <plugin.version.maven-compiler-plugin>3.3</plugin.version.maven-compiler-plugin>
-    <plugin.version.maven-surefire-plugin>2.19.1</plugin.version.maven-surefire-plugin>
-    <plugin.version.maven-failsafe-plugin>2.19.1</plugin.version.maven-failsafe-plugin>
+    <plugin.version.maven-surefire-plugin>2.18.1</plugin.version.maven-surefire-plugin>
+    <plugin.version.maven-failsafe-plugin>2.18.1</plugin.version.maven-failsafe-plugin>
   </properties>
   <dependencyManagement>
     <dependencies>

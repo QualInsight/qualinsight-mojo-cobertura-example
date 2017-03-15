@@ -102,7 +102,7 @@
             </goals>
             <phase>package</phase>
             <configuration>
-              <destinationPath>${project.build.directory}/cobertura/it/instrumented-classes</destinationPath>
+              <instrumentationPath>${project.build.directory}/cobertura/it/instrumented-classes</instrumentationPath>
             </configuration>
           </execution>
           <execution>
