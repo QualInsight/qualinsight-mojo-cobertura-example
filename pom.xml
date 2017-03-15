@@ -15,7 +15,7 @@
     <!-- Version of the qualinsight-plugins-jetty lib to be used -->
     <lib.version.qualinsight-plugins-jetty>1.0.1</lib.version.qualinsight-plugins-jetty>
     <!-- Version of the qualinsight-mojo-cobertura plugin to be tested -->
-    <plugin.version.qualinsight-mojo-cobertura-core>2.0.0-SNAPSHOT</plugin.version.qualinsight-mojo-cobertura-core>
+    <plugin.version.qualinsight-mojo-cobertura-core>2.0.0-RC1</plugin.version.qualinsight-mojo-cobertura-core>
     <!-- Libraries versions -->
     <lib.version.junitparams>1.0.4</lib.version.junitparams>
     <lib.version.assertj-core>2.1.0</lib.version.assertj-core>
@@ -26,8 +26,8 @@
     <lib.version.cobertura>2.1.1</lib.version.cobertura>
     <!-- Plugins versions -->
     <plugin.version.maven-compiler-plugin>3.3</plugin.version.maven-compiler-plugin>
-    <plugin.version.maven-surefire-plugin>2.18.1</plugin.version.maven-surefire-plugin>
-    <plugin.version.maven-failsafe-plugin>2.18.1</plugin.version.maven-failsafe-plugin>
+    <plugin.version.maven-surefire-plugin>2.19.1</plugin.version.maven-surefire-plugin>
+    <plugin.version.maven-failsafe-plugin>2.19.1</plugin.version.maven-failsafe-plugin>
   </properties>
   <dependencyManagement>
     <dependencies>
